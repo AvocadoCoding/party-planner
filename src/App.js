@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Homepage from './pages/Homepage';
+import Saved from './pages/Saved';
+import ToDo from './pages/ToDoList';
+import Guestlist from './pages/Guestlist';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        {/* Navbar at top of page*/}
+        <Navbar />
+        {/* Page routing to pull in different page content*/}
+          <Routes>
+            <Route path="/" element={<Homepage/>} />
+            <Route path="/homepage" element={<Homepage/>} />
+            <Route path="/saved-ideas" element={<Saved/>} />
+            <Route path="/todo-list" element={<ToDo/>} />
+            <Route path="/guestlist" element={<Guestlist/>} />
+          </Routes>
+        {/* Footer*/}
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
