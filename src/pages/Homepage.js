@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
-import backgroundImage from "../images/Aurora.jpg";
+import backgroundImage from "../images/party-dance-image.png";
 // import API from "../utils/API";
 
 function Homepage() {
