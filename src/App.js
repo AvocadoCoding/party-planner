@@ -4,8 +4,9 @@ import Homepage from './pages/Homepage';
 import Saved from './pages/Saved';
 import ToDo from './pages/ToDoList';
 import Guestlist from './pages/Guestlist';
-import Navbar from './components/Navbar';
+import NavbarBootstrap from './components/Navbar';
 import Footer from './components/Footer';
+import Wrapper from './components/Wrapper';
 
 
 
@@ -14,8 +15,10 @@ function App() {
     <Router>
       <div>
         {/* Navbar at top of page*/}
-        <Navbar />
-        {/* Page routing to pull in different page content*/}
+        <NavbarBootstrap />
+        {/* Extra wrapper for page content if we want to use it*/}
+        <Wrapper>
+          {/* Page routing to pull in different page content*/}
           <Routes>
             <Route path="/" element={<Homepage/>} />
             <Route path="/homepage" element={<Homepage/>} />
@@ -23,6 +26,7 @@ function App() {
             <Route path="/todo-list" element={<ToDo/>} />
             <Route path="/guestlist" element={<Guestlist/>} />
           </Routes>
+        </Wrapper>
         {/* Footer*/}
         <Footer />
       </div>
