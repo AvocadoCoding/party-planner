@@ -4,14 +4,22 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from "../../images/Logo.PNG";
 import './style.css';
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function  NavbarBootstrap() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" variant="dark" className="navProps">
       <Container>
-        <Navbar.Brand as={Link} to="/">The Party Planner</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+          <img 
+            alt="party planner logo"
+            src= {logo}
+            height= "80vmin"
+            className="d-inline-block align-top"
+            />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>

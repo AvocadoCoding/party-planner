@@ -5,3 +5,7 @@ nav.navbar.navbar-default {
 .navbar-nav {
   margin-left: auto;
 }
+
+.navProps{
+  background-color: #b51F29 !important;
+}
