@@ -3,7 +3,7 @@ import "./style.css";
 
 function Hero(props) {
   return (
-    <div className="hero text-center" style={{ backgroundImage: `url(${props.backgroundImage})` }} alt="Picture of Aurora Borealis">
+    <div className="hero text-center" style={{ backgroundImage: `url(${props.backgroundImage})` }} alt="Picture of people dancing">
       {props.children}
     </div>
   );

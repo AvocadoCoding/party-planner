@@ -15,12 +15,12 @@ function Homepage() {
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
-          <Col size="md-12">
+          <Col size="sm-12">
             <h1>Food - Cocktails - Music</h1>
           </Col>
         </Row>
         <Row>
-          <Col size="md-12">
+          <Col size="sm-12">
             <p>
             Search and save for ideas for food and cocktails! Create a music playlist! 
             </p>
