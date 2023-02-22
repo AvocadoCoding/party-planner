@@ -4,7 +4,9 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import backgroundImage from "../images/party-dance-image.png";
+
 // import API from "../utils/API";
+
 
 function Homepage() {
   return (
@@ -27,6 +29,7 @@ function Homepage() {
           </Col>
         </Row>
         <Row>
+          
         </Row>
       </Container>
     </div>
