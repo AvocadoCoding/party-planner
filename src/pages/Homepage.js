@@ -31,7 +31,10 @@ function Homepage() {
           </Col>
         </Row>
         <Row>
-          <CocktailsDropdown></CocktailsDropdown>
+        <Col size="sm-3">
+          <h2>Cocktail Search</h2>
+          <CocktailsDropdown/>
+        </Col>
         </Row>
       </Container>
     </div>
