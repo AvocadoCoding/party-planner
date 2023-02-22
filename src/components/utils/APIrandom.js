@@ -1,11 +1,10 @@
 import axios from 'axios';
 
-// Using axios, we create a search method that is specific to our use case and export it at the bottom
-const search = (query) =>
+const searchRandom = (query) =>
   axios.get(`thecocktaildb.com/api/json/v1/1/filter.php?${query}`);
 
-// Export an object with a "search" method that searches the CocktailDB API for the passed query
-export default search;
+// Export an object with a "search" method that does random CocktailDB search
+export default searchRandom;
 
 
 // CocktailDB API
