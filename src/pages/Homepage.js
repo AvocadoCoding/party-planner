@@ -5,6 +5,8 @@ import Row from "../components/Row";
 import Col from "../components/Col";
 import backgroundImage from "../images/party-dance-image.png";
 
+import CocktailsDropdown from "../components/Dropdown";
+
 // import API from "../utils/API";
 
 
@@ -29,7 +31,7 @@ function Homepage() {
           </Col>
         </Row>
         <Row>
-          
+          <CocktailsDropdown></CocktailsDropdown>
         </Row>
       </Container>
     </div>
