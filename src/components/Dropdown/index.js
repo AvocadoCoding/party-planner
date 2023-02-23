@@ -1,22 +1,28 @@
 import Form from 'react-bootstrap/Form';
 import search from "../utils/API" 
+import { useState } from "react";
 
 
 function CocktailsDropdown() {
   // handleSelect()=> {}
   
-  const handleChange = (e) => {
-    const { value } = e.target;
-    search(value)
-  }
+
+  const  [ingredient, setIngredient]= useState("");
   
   return (
     <Form.Select
     aria-label="Default select example"
-    onChange={handleChange}
+    // When the form select is changed the ingredient variable 
+    // in the useState dunction is changed to the target.value attibute value
+    onChange={ (e) => {
+      e.preventDefault();
+      setIngredient(e.target.value);
+      console.log(ingredient);
+      }
+    }
     >
       <option>Choose main ingredient</option>
-      <option onSelect= {() => search('i=Vodka')}>Vodka</option> 
+      <option value= 'i=Vodka'>Vodka</option> 
       {/* ingredient= 'i=Vodka' */}
       {/* Should I add something like: */}
       {/* this.onClick= search(ingredient)  */}
