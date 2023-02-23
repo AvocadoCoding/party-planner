@@ -13,20 +13,21 @@ import search from "../components/utils/API";
 
 function Homepage() {
 
+  // set useState value for user ingredient selection
   const  [ingredient, setIngredient]= useState("");
+  // useState array variable to hold API response
   const  [drinksAPI, setDrinksAPI]= useState([]);
   console.log(drinksAPI);
   // only trigger function when ingredient changes
   useEffect(()=>{
-  // take ingredient state values and run API 
+  // take ingredient state values and run API
+  // if function to choose API call 
   if (ingredient && ingredient !== 'Random'){  
-    console.log(ingredient)
     search.searchIngredient(ingredient)
     .then(drinks=>setDrinksAPI(drinks.data.drinks))
     .catch(err=>console.log(err))
   } else if (ingredient && ingredient === 'Random'){
-    console.log(ingredient)
-    search.searchRandom(ingredient)
+    search.searchRandom()
     .then(drinks=>setDrinksAPI(drinks.data.drinks))
     .catch(err=>console.log(err))
   }
@@ -53,6 +54,7 @@ function Homepage() {
         <Row>
         <Col size="sm-3">
           <h2>Cocktail Search</h2>
+          {/* Call in CocktailsDropdown component and pass in empty useState values */}
           <CocktailsDropdown ingredient={ingredient} setIngredient= {setIngredient} />
         </Col>
         </Row>

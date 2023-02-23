@@ -18,8 +18,7 @@ function CocktailsDropdown({ingredient, setIngredient}) {
       <option>Choose main ingredient</option>
       <option value= 'i=Vodka' onClick={ (e) => handleChange(e)}>Vodka</option> 
       {/* ingredient= 'i=Vodka' */}
-      {/* Should I add something like: */}
-      {/* this.onClick= search(ingredient)  */}
+      {/* this.onClick= triggers funciton to update ingredient variable  */}
       <option value= 'i=Gin' onClick={ (e) => handleChange(e)}>Gin</option>
       {/* i=Gin */}
       <option value= 'i=Whisky' onClick={ (e) => handleChange(e)}>Whisky</option>
