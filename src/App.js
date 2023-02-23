@@ -4,6 +4,7 @@ import Homepage from './pages/Homepage';
 import Saved from './pages/Saved';
 import ToDo from './pages/ToDoList';
 import Guestlist from './pages/Guestlist';
+import Invitation from './pages/Invitation';
 import NavbarBootstrap from './components/Navbar';
 import Footer from './components/Footer';
 import Wrapper from './components/Wrapper';
@@ -25,6 +26,7 @@ function App() {
             <Route path="/saved-ideas" element={<Saved/>} />
             <Route path="/todo-list" element={<ToDo/>} />
             <Route path="/guestlist" element={<Guestlist/>} />
+            <Route path="/invitations" element={<Invitation/>} />
           </Routes>
         </Wrapper>
         {/* Footer*/}
