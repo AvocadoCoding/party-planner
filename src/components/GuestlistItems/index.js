@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const GuestlistItems = ({guests, setGuests}) => {
     
@@ -24,17 +25,21 @@ const GuestlistItems = ({guests, setGuests}) => {
         <ul>
             {guests.map((guest) => (
                 <li className="guest-item" key={guest.id}>
-                    {guest.title}
+                    <input 
+                    value={guest.title}
+                    className= {`list ${guest.completed ? "complete" : ""}`}
+                    />
                     <div>
                         <button className="button-complete" onClick={() => handleComplete(guest)}>
                         ✅
                         </button>
-                        <button className="button-edit">
-                        ✏️
+                        <button className="button-invitation">
+                        💌
                         </button>
                         <button className="button-delete" onClick={() => handleDelete(guest)}>
                         🗑️
                         </button>
+                        
                     </div>
                 </li>
             ))}
