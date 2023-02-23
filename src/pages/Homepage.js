@@ -6,7 +6,7 @@ import Col from "../components/Col";
 import backgroundImage from "../images/party-dance-image.png";
 
 import CocktailsDropdown from "../components/Dropdown";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import search from "../components/utils/API";
 
@@ -15,7 +15,9 @@ function Homepage() {
 
   const  [ingredient, setIngredient]= useState("");
   const  [drinksAPI, setDrinksAPI]= useState([]);
-  
+  console.log(drinksAPI);
+  // only trigger function when ingredient changes
+  useEffect(()=>{
   // take ingredient state values and run API 
   if (ingredient && ingredient !== 'Random'){  
     console.log(ingredient)
@@ -28,7 +30,7 @@ function Homepage() {
     .then(drinks=>setDrinksAPI(drinks.data.drinks))
     .catch(err=>console.log(err))
   }
-
+  },[ingredient])
   return (
     <div>
       <Hero backgroundImage={backgroundImage}>
