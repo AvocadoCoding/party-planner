@@ -10,6 +10,8 @@ import { useState, useEffect } from "react";
 
 import search from "../components/utils/API";
 
+import CocktailCards from "../components/CardsCocktails";
+
 
 function Homepage() {
 
@@ -32,6 +34,7 @@ function Homepage() {
     .catch(err=>console.log(err))
   }
   },[ingredient])
+ 
   return (
     <div>
       <Hero backgroundImage={backgroundImage}>
@@ -58,6 +61,11 @@ function Homepage() {
           <CocktailsDropdown ingredient={ingredient} setIngredient= {setIngredient} />
         </Col>
         </Row>
+        <Row>
+        {/* Four cocktail cards will go here */}
+        <CocktailCards/>
+        </Row>
+
       </Container>
     </div>
   );
