@@ -20,6 +20,7 @@ const GuestlistForm = ({guests, setGuests}) => {
 
     return (
         <form className="form" onSubmit={handleSubmit}>
+            <h2 className="guestlist-title">Guestlist</h2>
             <input 
                 type="text"
                 placeholder="Enter a guest name"

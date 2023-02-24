@@ -19,10 +19,8 @@ const GuestlistItems = ({guests, setGuests}) => {
     }
 
 
-
-
     return (
-        <ul>
+        <ul className="guestlist-items-container">
             {guests.map((guest) => (
                 <li className="guest-item" key={guest.id}>
                     <input 
