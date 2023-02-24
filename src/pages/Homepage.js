@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
-import Col from "../components/Col";
+import Col from 'react-bootstrap/Col';
 import backgroundImage from "../images/party-dance-image.png";
 
 import CocktailsDropdown from "../components/Dropdown";
@@ -65,12 +65,13 @@ function Homepage() {
           <CocktailsDropdown ingredient={ingredient} setIngredient= {setIngredient} />
         </Col>
         </Row>
+        <br/>
         <Row>
         {/* Four cocktail cards will go here, but will be retuend via mapping component */}
         {drinksAPI.map((currentDrink)=> (
-        <div key={currentDrink.idDrink}>
+        <Col xs={12} sm={6} lg={3} key={currentDrink.idDrink}>
         <CocktailCards drink= {currentDrink}/>
-        </div>
+        </Col>
         ))}
         </Row>
 
