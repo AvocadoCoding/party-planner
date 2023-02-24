@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {v4 as uuidv4} from "uuid";
+import './style.css';
 // import Button from 'react-bootstrap/Button';
 // import Form from 'react-bootstrap/Form';
 
@@ -19,6 +20,7 @@ const GuestlistForm = ({guests, setGuests}) => {
 
     return (
         <form className="form" onSubmit={handleSubmit}>
+            <h2 className="guestlist-title">Guestlist</h2>
             <input 
                 type="text"
                 placeholder="Enter a guest name"
@@ -28,7 +30,7 @@ const GuestlistForm = ({guests, setGuests}) => {
                 // onChange={(e) => setInput(e.target.value)}
                 onChange={onInputChange}
             />
-            <button className="add-button" type="submit">Add</button>
+            <button className="button-add button" type="submit">Add</button>
             {/* <p>{ input }</p> */}
         </form>
     // <Form>

@@ -12,7 +12,7 @@ function Guestlist() {
   }, [guests]);
 
   return (
-    <div>
+    <div className="guestlist-container" >
       <GuestlistForm
         guests={guests}
         setGuests={setGuests}

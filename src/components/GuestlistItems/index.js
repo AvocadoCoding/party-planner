@@ -19,24 +19,22 @@ const GuestlistItems = ({guests, setGuests}) => {
     }
 
 
-
-
     return (
-        <ul>
+        <ul className="guestlist-items-container">
             {guests.map((guest) => (
                 <li className="guest-item" key={guest.id}>
                     <input 
                     value={guest.title}
                     className= {`list ${guest.completed ? "complete" : ""}`}
                     />
-                    <div>
-                        <button className="button-complete" onClick={() => handleComplete(guest)}>
+                    <div className="button-container">
+                        <button className="button-complete button" onClick={() => handleComplete(guest)}>
                         ✅
                         </button>
-                        <button className="button-invitation">
+                        <button className="button-invitation button">
                         💌
                         </button>
-                        <button className="button-delete" onClick={() => handleDelete(guest)}>
+                        <button className="button-delete button" onClick={() => handleDelete(guest)}>
                         🗑️
                         </button>
                         
