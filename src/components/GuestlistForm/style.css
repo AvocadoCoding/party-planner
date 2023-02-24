@@ -1,0 +1,71 @@
+/* # this page contains styling for all guestlist page components */
+
+/* styling for div containing all guestlist elements */
+.guestlist-container {
+    margin: 0 auto;
+    padding: 50px;
+}
+
+/* styling for div containing input form */
+.form {
+margin-bottom: 20px;
+}
+
+/* styling for input field only */
+.guest-input {
+    border: 1.5px solid #5e5e5e;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+/* styling for list items including guest name and buttons*/
+.guest-item {
+    list-style-type: none;
+    /* border: 1.5px solid #5e5e5e; */
+    background-color: #49c2bc;
+    border-radius: 5px;
+    width: 340px;
+    height: 50px;
+    margin: 10px 0;
+}
+
+/* styling for guest names only*/
+.list {
+    width: 220px;
+    border: none;
+    background-color: #49c2bc;
+    color: white;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+/* styling for all buttons */
+.button {
+    border: none;
+    padding: 7px
+}
+
+/* styling for add button */
+.button-add {
+    margin-left: 10px;
+    background-color: #fa7b55;
+    color: white;
+    border-radius: 5px;
+}
+
+/* styling for div containing three buttons */
+.button-container {
+    display: inline;
+}
+
+/* styling for three individual buttons */
+.button-complete, .button-invitation, .button-delete {
+    background-color: #49c2bc;
+}
+
+/* styling for guest names once marked as complete */
+.complete {
+    text-decoration-line: line-through;
+    opacity: 0.7;
+}
+
