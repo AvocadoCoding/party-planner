@@ -20,13 +20,17 @@ function Homepage() {
   // useState array variable to hold API response
   const  [drinksAPI, setDrinksAPI]= useState([]);
   console.log(drinksAPI);
+  // console.log(drinksAPI[1].idDrink);
+
+  // const test = drinksAPI.map((a)=>{a.idDrink})
+  // console.log(drinksAPI.map((a)=>{a.idDrink}));
   // only trigger function when ingredient changes
   useEffect(()=>{
   // take ingredient state values and run API
   // if function to choose API call 
   if (ingredient && ingredient !== 'Random'){  
     search.searchIngredient(ingredient)
-    .then(drinks=>setDrinksAPI(drinks.data.drinks))
+    .then(drinks=>setDrinksAPI((drinks.data.drinks)))
     .catch(err=>console.log(err))
   } else if (ingredient && ingredient === 'Random'){
     search.searchRandom()
@@ -62,8 +66,12 @@ function Homepage() {
         </Col>
         </Row>
         <Row>
-        {/* Four cocktail cards will go here */}
-        <CocktailCards/>
+        {/* Four cocktail cards will go here, but will be retuend via mapping component */}
+        {drinksAPI.map((currentDrink)=> (
+        <div key={currentDrink.idDrink}>
+        <CocktailCards drink= {currentDrink}/>
+        </div>
+        ))}
         </Row>
 
       </Container>
