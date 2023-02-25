@@ -15,7 +15,7 @@ function CocktailsDropdown({ingredient, setIngredient}) {
     // When the form select is changed the ingredient variable 
     // in the useState dunction is changed to the target.value attibute value
         >
-      <option>Choose main ingredient</option>
+      <option >Choose main ingredient</option>
       <option value= 'i=Vodka' onClick={ (e) => handleChange(e)}>Vodka</option> 
       {/* ingredient= 'i=Vodka' */}
       {/* this.onClick= triggers funciton to update ingredient variable  */}
@@ -31,9 +31,13 @@ function CocktailsDropdown({ingredient, setIngredient}) {
       {/* i=Whisky */}
       <option value= 'i=White wine' onClick={ (e) => handleChange(e)}>White Wine</option>
       {/* i=Whisky */}
-      <option value= 'a=Non_Alcoholic' onClick={ (e) => handleChange(e)}>Non-alcoholic</option>
+      <option value= 'a=Non_Alcoholic' onClick={ (e) => handleChange(e)}
+      style={{backgroundColor: '#BCFF85'}}
+      >Non-alcoholic</option>
       {/* i=Non-alcoholic */}
-      <option value= 'Random' onClick={ (e) => handleChange(e)}>Random</option>
+      <option value= 'Random' onClick={ (e) => handleChange(e)}
+      style={{backgroundColor: '#49C2BC'}}
+      >Random</option>
       {/* www.thecocktaildb.com/api/json/v1/1/random.php */}
     </Form.Select>
   );

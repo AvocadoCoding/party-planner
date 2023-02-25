@@ -40,12 +40,12 @@ function Homepage() {
   },[ingredient])
  
   return (
-    <div>
+    <div style={{backgroundColor: '#FA7B55'}}>
       <Hero backgroundImage={backgroundImage}>
         <h1 className="heroHeader">Welcome to The Party Planner!</h1>
         <h2>Plan your food, drinks and music- plan tasks - make your guestlist and print invites!</h2>
       </Hero>
-      <Container style={{ marginTop: 30 }}>
+      <Container style={{ marginTop: 30, backgroundColor: '#FA7B55' }}>
         <Row>
           <Col size="sm-12">
             <h1>Food - Cocktails - Music</h1>
