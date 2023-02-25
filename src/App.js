@@ -14,7 +14,7 @@ import Wrapper from './components/Wrapper';
 function App() {
   return (
     <Router>
-      <div>
+      <div style={{backgroundColor: '#FEE1C7'}}>
         {/* Navbar at top of page*/}
         <NavbarBootstrap />
         {/* Extra wrapper for page content if we want to use it*/}
@@ -25,7 +25,7 @@ function App() {
             <Route path="/homepage" element={<Homepage/>} />
             <Route path="/saved-ideas" element={<Saved/>} />
             <Route path="/todo-list" element={<ToDo/>} />
-            <Route path="/guestlist" element={<Guestlist/>} />
+            <Route path="/guestlist" element={<Guestlist />} />
             <Route path="/invitations" element={<Invitation/>} />
           </Routes>
         </Wrapper>
