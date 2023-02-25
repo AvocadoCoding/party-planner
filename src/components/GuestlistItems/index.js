@@ -26,6 +26,7 @@ const GuestlistItems = ({guests, setGuests}) => {
                     <input 
                     value={guest.title}
                     className= {`list ${guest.completed ? "complete" : ""}`}
+                    style={{ color: 'black'}}
                     />
                     <div className="button-container">
                         <button className="button-complete button" onClick={() => handleComplete(guest)}>
