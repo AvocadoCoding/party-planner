@@ -3,8 +3,9 @@ import axios from 'axios';
 // Using axios, we create a search method that is specific to our use case and export it at the bottom
 
 const search = {
-  searchRandom: () => axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php`),
-  searchIngredient: (query) => axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?${query}`)
+  searchRandom: () => axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`),
+  searchIngredient: (query) => axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?${query}`),
+  searchID: (query) => axios.get(`www.thecocktaildb.com/api/json/v1/1/lookup.php?${query}`)
 }
 
 // How to call

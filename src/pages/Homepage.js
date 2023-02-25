@@ -1,8 +1,8 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Container from "../components/Container";
-import Row from "../components/Row";
-import Col from "../components/Col";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import backgroundImage from "../images/party-dance-image.png";
 
 import CocktailsDropdown from "../components/Dropdown";
@@ -10,27 +10,35 @@ import { useState, useEffect } from "react";
 
 import search from "../components/utils/API";
 
+import CocktailCards from "../components/CardsCocktails";
+
 
 function Homepage() {
 
+  // set useState value for user ingredient selection
   const  [ingredient, setIngredient]= useState("");
+  // useState array variable to hold API response
   const  [drinksAPI, setDrinksAPI]= useState([]);
   console.log(drinksAPI);
+  // console.log(drinksAPI[1].idDrink);
+
+  // const test = drinksAPI.map((a)=>{a.idDrink})
+  // console.log(drinksAPI.map((a)=>{a.idDrink}));
   // only trigger function when ingredient changes
   useEffect(()=>{
-  // take ingredient state values and run API 
+  // take ingredient state values and run API
+  // if function to choose API call 
   if (ingredient && ingredient !== 'Random'){  
-    console.log(ingredient)
     search.searchIngredient(ingredient)
-    .then(drinks=>setDrinksAPI(drinks.data.drinks))
+    .then(drinks=>setDrinksAPI((drinks.data.drinks)))
     .catch(err=>console.log(err))
   } else if (ingredient && ingredient === 'Random'){
-    console.log(ingredient)
-    search.searchRandom(ingredient)
+    search.searchRandom()
     .then(drinks=>setDrinksAPI(drinks.data.drinks))
     .catch(err=>console.log(err))
   }
   },[ingredient])
+ 
   return (
     <div>
       <Hero backgroundImage={backgroundImage}>
@@ -53,9 +61,20 @@ function Homepage() {
         <Row>
         <Col size="sm-3">
           <h2>Cocktail Search</h2>
+          {/* Call in CocktailsDropdown component and pass in empty useState values */}
           <CocktailsDropdown ingredient={ingredient} setIngredient= {setIngredient} />
         </Col>
         </Row>
+        <br/>
+        <Row>
+        {/* Four cocktail cards will go here, but will be retuend via mapping component */}
+        {drinksAPI.map((currentDrink)=> (
+        <Col xs={12} sm={6} lg={3} key={currentDrink.idDrink}>
+        <CocktailCards drink= {currentDrink}/>
+        </Col>
+        ))}
+        </Row>
+
       </Container>
     </div>
   );

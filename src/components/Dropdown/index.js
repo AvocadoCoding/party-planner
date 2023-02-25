@@ -18,11 +18,18 @@ function CocktailsDropdown({ingredient, setIngredient}) {
       <option>Choose main ingredient</option>
       <option value= 'i=Vodka' onClick={ (e) => handleChange(e)}>Vodka</option> 
       {/* ingredient= 'i=Vodka' */}
-      {/* Should I add something like: */}
-      {/* this.onClick= search(ingredient)  */}
+      {/* this.onClick= triggers funciton to update ingredient variable  */}
       <option value= 'i=Gin' onClick={ (e) => handleChange(e)}>Gin</option>
       {/* i=Gin */}
       <option value= 'i=Whisky' onClick={ (e) => handleChange(e)}>Whisky</option>
+      {/* i=Whisky */}
+      <option value= 'i=Rum' onClick={ (e) => handleChange(e)}>Rum</option>
+      {/* i=Whisky */}
+      <option value= 'i=Beer' onClick={ (e) => handleChange(e)}>Beer</option>
+      {/* i=Whisky */}
+      <option value= 'i=Red wine' onClick={ (e) => handleChange(e)}>Red Wine</option>
+      {/* i=Whisky */}
+      <option value= 'i=White wine' onClick={ (e) => handleChange(e)}>White Wine</option>
       {/* i=Whisky */}
       <option value= 'a=Non_Alcoholic' onClick={ (e) => handleChange(e)}>Non-alcoholic</option>
       {/* i=Non-alcoholic */}
