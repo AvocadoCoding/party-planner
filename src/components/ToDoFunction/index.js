@@ -44,6 +44,7 @@ function ToDoFunction() {
 
     return (
         <div className="todo-container">
+            <h1>Party Planner To Do List</h1>
             <div className="header">Pending tasks ({tasksRemaining})</div>
             <div className="tasks">
                 {tasks.map((task, index) => (
