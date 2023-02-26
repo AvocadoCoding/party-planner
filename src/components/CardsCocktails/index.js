@@ -44,6 +44,10 @@ function CocktailCards(props) {
         Ingredients and Instructions
       </Button>
 
+      {/* Favourite button */}
+      
+      <FavouriteButton value={props.drink.idDrink}/>
+
     {modalAPI.map((drinkID)=>(
       <Modal show={show} onHide={handleClose} key={drinkID.idDrink}>
         <Modal.Header closeButton>
