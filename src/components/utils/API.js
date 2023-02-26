@@ -5,7 +5,7 @@ import axios from 'axios';
 const search = {
   searchRandom: () => axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`),
   searchIngredient: (query) => axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?${query}`),
-  searchID: (query) => axios.get(`www.thecocktaildb.com/api/json/v1/1/lookup.php?${query}`)
+  searchID: (query) => axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${query}`)
 }
 
 // How to call
