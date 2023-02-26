@@ -46,7 +46,7 @@ function CocktailCards(props) {
 
       {/* Favourite button */}
       
-      <FavouriteButton value={props.drink.idDrink}/>
+      {/* <FavouriteButton value={props.drink.idDrink}/> */}
 
     {modalAPI.map((drinkID)=>(
       <Modal show={show} onHide={handleClose} key={drinkID.idDrink}>
