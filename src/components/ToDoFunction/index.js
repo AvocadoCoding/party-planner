@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import TaskForm from './TaskForm';
+import Task from './Task';
 
 function ToDoFunction() {
     const [tasksRemaining, setTasksRemaining] = useState(0);
@@ -54,7 +56,9 @@ function ToDoFunction() {
                 ))}
             </div>
             <div className="create-task" >
+            {tasks.map((task, index) => (
                 <TaskForm task={task} addTask={addTask} setTask={setTask}/>
+            ))}
             </div>
         </div>
     );
