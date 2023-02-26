@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import React, { useState} from 'react';
 import search from "../utils/API";
+import FavouriteButton from "../FavouriteButton";
 import "./style.css";
 
 function CocktailCards(props) {
@@ -37,17 +38,17 @@ function CocktailCards(props) {
         </div>
       
       {/* Modal button and modal content */}
-      
+        <div className="buttonContainer">
         <Button value={props.drink.idDrink} onClick={(e) => handleShow(e)} 
         style={{ color: 'black', backgroundColor: '#FA7B55', border: 'black'}}
         >
         Ingredients and Instructions
       </Button>
-
+      </div>
       {/* Favourite button */}
-      
-      {/* <FavouriteButton value={props.drink.idDrink}/> */}
-
+      <div className="buttonContainer">
+      <FavouriteButton value={props.drink.idDrink}/>
+      </div>
     {modalAPI.map((drinkID)=>(
       <Modal show={show} onHide={handleClose} key={drinkID.idDrink}>
         <Modal.Header closeButton>
@@ -67,9 +68,6 @@ function CocktailCards(props) {
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
           </Button>
         </Modal.Footer>
       </Modal>
