@@ -4,12 +4,7 @@ import search from "../utils/API";
 
 function FavouriteButton({value, drinkStorage, setDrinkStorage}){
 
-    
-    
-    
-  
-        
-
+    console.log(typeof drinkStorage);
     
     // useState for favourite button colour change
     // const [colour, setColor]= useState ("white");
@@ -23,15 +18,16 @@ function FavouriteButton({value, drinkStorage, setDrinkStorage}){
     console.log(e.target.value)
     search.searchID(e.target.value)
     .then(response=>{
-        const drinksObject = response.data.drinks
+        const drinksObject = response.data.drinks[0].idDrink
         /* {
             id: response.data.drinks.idDrink,
             name: response.data.drinks.strDrink,
             image: response.drink.data.strDrinkThumb 
         } */
         console.log(drinksObject);
-        setDrinkStorage([...drinkStorage,drinksObject])
-        // setDrinks(...drinks,(drinksObject))
+        console.log(typeof drinkObject);
+        // setDrinkStorage(drinkStorage.push(drinksObject))
+        setDrinkStorage([...drinkStorage, {drinksObject}])
         console.log(typeof drinkStorage);
         localStorage.setItem("drinks", JSON.stringify(drinkStorage))
     })
