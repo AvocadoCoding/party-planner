@@ -12,7 +12,7 @@ const initialState = JSON.parse(localStorage.getItem("drinks")) || [];
 const [drinkStorage, setDrinkStorage] = useState(initialState);
 console.log(drinkStorage);
 
-//Function to delete item from array
+//Function to delete item from array by filtering by id
 const handleDelete = ({id}) => {
   setDrinkStorage(drinkStorage.filter((drink) => drink.id !== id));
 }
