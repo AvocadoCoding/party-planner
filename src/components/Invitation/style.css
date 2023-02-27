@@ -1,0 +1,37 @@
+.invitation-form{
+    margin: 50px auto;
+    padding: 50px;
+    max-width: 600px;
+    min-height: 800px;
+    background-image: url(../../images/invitation-background.jpg);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* styling for all 3 form input fields including labels */
+.form-input-group{
+    max-width: 300px;
+    margin: auto;
+}
+
+/* styling for all input fields only */
+.form-input{
+    border: none;
+}
+
+.message{
+    margin-bottom: 60px;
+}
+
+.venue, .date{
+    margin-bottom: 20px;
+}
+
+.from{
+    margin-top: 100px;
+}
+
+/* styling for "You're invited to" message */
+.youre-invited{
+    text-align: center;
+    margin: 30px;
+}
