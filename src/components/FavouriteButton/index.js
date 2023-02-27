@@ -1,10 +1,11 @@
-import React, { useState} from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import search from "../utils/API";
 
 function FavouriteButton({value, drinkStorage, setDrinkStorage}){
 
-    console.log(typeof drinkStorage);
+    // console.log(typeof drinkStorage);
+    // console.log(drinkStorage);
     
     // useState for favourite button colour change
     // const [colour, setColor]= useState ("white");
@@ -18,17 +19,17 @@ function FavouriteButton({value, drinkStorage, setDrinkStorage}){
     console.log(e.target.value)
     search.searchID(e.target.value)
     .then(response=>{
-        const drinksObject = response.data.drinks[0].idDrink
-        /* {
-            id: response.data.drinks.idDrink,
-            name: response.data.drinks.strDrink,
-            image: response.drink.data.strDrinkThumb 
-        } */
+        const drinksObject = 
+        {
+            id: response.data.drinks[0].idDrink,
+            name: response.data.drinks[0].strDrink,
+            image: response.data.drinks[0].strDrinkThumb 
+        }
         console.log(drinksObject);
-        console.log(typeof drinkObject);
         // setDrinkStorage(drinkStorage.push(drinksObject))
-        setDrinkStorage([...drinkStorage, {drinksObject}])
+        setDrinkStorage([...drinkStorage, drinksObject])
         console.log(typeof drinkStorage);
+        console.log(drinkStorage);
         localStorage.setItem("drinks", JSON.stringify(drinkStorage))
     })
   }
