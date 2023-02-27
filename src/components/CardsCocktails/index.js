@@ -38,6 +38,7 @@ function CocktailCards(props) {
         localStorage.setItem("drinks", JSON.stringify(drinkStorage));
         }, [drinkStorage]);
 // if drink ID already in storage, make favourite button light red
+
  
   return (
     // Cards put inside column of width 3--> want xs={6}, s= 3
