@@ -19,12 +19,12 @@ function FavouriteButton({value, drinkStorage, setDrinkStorage}){
     console.log(e.target.value)
     search.searchID(e.target.value)
     .then(response=>{
-        const drinksObject = 
+        const drinksObject = Object.assign({},
         {
             id: response.data.drinks[0].idDrink,
             name: response.data.drinks[0].strDrink,
             image: response.data.drinks[0].strDrinkThumb 
-        }
+        });
         console.log(drinksObject);
         // setDrinkStorage(drinkStorage.push(drinksObject))
         setDrinkStorage([...drinkStorage, drinksObject])
