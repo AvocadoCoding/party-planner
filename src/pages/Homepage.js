@@ -38,6 +38,7 @@ function Homepage() {
     .catch(err=>console.log(err))
   }
   },[ingredient])
+
  
   return (
     <div style={{backgroundColor: '#FEE1C7'}}>

@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import search from "../utils/API";
 import FavouriteButton from "../FavouriteButton";
 import "./style.css";
@@ -27,10 +27,21 @@ function CocktailCards(props) {
     setShow(true);
   }
   console.log(modalAPI);
+
+  // get local storage for button toogle, if nothing in local storage return
+    // empty array
+    const initialState = JSON.parse(localStorage.getItem("drinks")) || [];
+    const [drinkStorage, setDrinkStorage] = useState(initialState);
+    console.log(drinkStorage);
+
+    useEffect(() => {
+        localStorage.setItem("drinks", JSON.stringify(drinkStorage));
+        }, [drinkStorage]);
+// if drink ID already in storage, make favourite button light red
  
   return (
     // Cards put inside column of width 3--> want xs={6}, s= 3
-    <Card style={{ width: '18rem', margin: '10px'}}>
+    <Card style={{ width: '18rem', margin: '10px', borderColor: 'black'}}>
       <Card.Img variant="top" src={props.drink.strDrinkThumb}/>
       <Card.Body style={{backgroundColor: '#49C2BC'}}>
         <div className='title'>
@@ -40,14 +51,18 @@ function CocktailCards(props) {
       {/* Modal button and modal content */}
         <div className="buttonContainer">
         <Button value={props.drink.idDrink} onClick={(e) => handleShow(e)} 
-        style={{ color: 'black', backgroundColor: '#FA7B55', border: 'black'}}
+        style={{ color: 'black', backgroundColor: '#FA7B55', borderColor: 'black'}}
         >
         Ingredients and Instructions
       </Button>
       </div>
       {/* Favourite button */}
       <div className="buttonContainer">
-      <FavouriteButton value={props.drink.idDrink}/>
+      <FavouriteButton 
+        value={props.drink.idDrink}
+        drinkStorage={drinkStorage}
+        setDrinkStorage={setDrinkStorage}
+        />
       </div>
     {modalAPI.map((drinkID)=>(
       <Modal show={show} onHide={handleClose} key={drinkID.idDrink}>
