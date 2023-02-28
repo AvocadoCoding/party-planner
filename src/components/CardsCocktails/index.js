@@ -19,6 +19,8 @@ function CocktailCards({ drink, drinkStorage, setDrinkStorage }) {
   // state variable for button text
   const [buttonText, setButtonText ] = useState('Favourite');
 
+  
+  // modal window close function
   const handleClose = () => setShow(false);
 
   // modal window open function with API call
@@ -33,12 +35,7 @@ function CocktailCards({ drink, drinkStorage, setDrinkStorage }) {
   };
   console.log(modalAPI);
 
-  // console.log(typeof drinkStorage);
-  // console.log(drinkStorage);
-
-  // useLocalStorage library for local storage
-  // const [favouriteDrink, setFavouriteDrink] = useLocalStorage([])
-
+  
   // Need to add API call in this part
   const handleFavourite = (e) => {
     // search drinkStorage array to see if ID is already present
@@ -55,7 +52,7 @@ function CocktailCards({ drink, drinkStorage, setDrinkStorage }) {
             key: response.data.drinks[0].idDrink,
             name: response.data.drinks[0].strDrink,
             image: response.data.drinks[0].strDrinkThumb,
-            /* instructions: response.data.drinks[0].strInstructions,
+            instructions: response.data.drinks[0].strInstructions,
             ingredients1: response.data.drinks[0].strIngredient1,
             ingredients2: response.data.drinks[0].strIngredient2,  
             ingredients3: response.data.drinks[0].strIngredient3,  
@@ -85,7 +82,7 @@ function CocktailCards({ drink, drinkStorage, setDrinkStorage }) {
             measure12: response.data.drinks[0].strMeasure12,  
             measure13: response.data.drinks[0].strMeasure13,  
             measure14: response.data.drinks[0].strMeasure14,  
-            measure15: response.data.drinks[0].strMeasure15, */
+            measure15: response.data.drinks[0].strMeasure15,
           }
         );
 
@@ -128,7 +125,7 @@ function CocktailCards({ drink, drinkStorage, setDrinkStorage }) {
           <Card.Title>{drink.strDrink}</Card.Title>
         </div>
 
-        {/* Modal button and modal content */}
+        {/* Modal button */}
         <div className="buttonContainer">
           <Button
             value={drink.idDrink}
@@ -159,13 +156,9 @@ function CocktailCards({ drink, drinkStorage, setDrinkStorage }) {
             </Button>
           }
 
-          {/* <FavouriteButton 
-        value={drink.drink.idDrink}
-        drinkStorage={drinkStorage}
-        setDrinkStorage={setDrinkStorage}
-        /> */}
         </div>
 
+        {/* Modal content */}
         {modalAPI.map((drinkID) => (
           <Modal show={show} onHide={handleClose} key={drinkID.idDrink}>
             <Modal.Header closeButton>
