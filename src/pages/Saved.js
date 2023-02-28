@@ -14,7 +14,7 @@ console.log(drinkStorage);
 
 //Function to delete item from array by filtering by id
 const handleDelete = ({id}) => {
-  setDrinkStorage(drinkStorage.filter((drink) => drink.id !== id));
+  setDrinkStorage(drinkStorage.filter((drink) => drink.key !== id));
 }
 
 
@@ -22,12 +22,12 @@ const handleDelete = ({id}) => {
   return (
     <Row>
     {drinkStorage.map((currentDrink)=> (
-      <Col xs={12} sm={6} lg={3} key={currentDrink.idDrink}>
+      <Col xs={12} sm={6} lg={3} key={currentDrink.key}>
         <Card style={{ width: '18rem', margin: '10px', borderColor: 'black'}}>
-          <Card.Img variant="top" src={currentDrink.strDrinkThumb}/>
+          <Card.Img variant="top" src={currentDrink.image}/>
             <Card.Body style={{backgroundColor: '#49C2BC'}}>
               <div className='title'>
-              <Card.Title>{currentDrink.strDrink}</Card.Title>
+              <Card.Title>{currentDrink.name}</Card.Title>
               </div>
                 <h3>Instructions</h3>
                 <p>{currentDrink.strInstructions}</p>
