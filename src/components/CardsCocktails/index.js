@@ -145,14 +145,14 @@ function CocktailCards({drink, drinkStorage, setDrinkStorage}) {
 
       {/* Favourite button */}
       <div className="buttonContainer">
-      {/* {<Button 
-        value={drink.drinks.idDrink}
+      {<Button 
+        value={drink.idDrink}
         onClick={(e) => handleFavourite(e)}
         style={{ color: 'black', backgroundColor: colour, 
         borderColor: 'black'}}
         >
         Favourite
-      </Button>} */}
+      </Button>}
       
       {/* <FavouriteButton 
         value={drink.drink.idDrink}
