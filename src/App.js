@@ -23,7 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage/>} />
             <Route path="/homepage" element={<Homepage/>} />
-            <Route path="/saved-ideas" element={<Saved/>} />
+            <Route path="/favourites" element={<Saved/>} />
             <Route path="/todo-list" element={<ToDo/>} />
             <Route path="/guestlist" element={<Guestlist />} />
             <Route path="/invitations" element={<Invitation/>} />
