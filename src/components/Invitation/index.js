@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form';
+import InviteDropdown from "../InviteDropdown";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import "./style.css";
 
 const InvitationForm = () => {
@@ -33,7 +36,14 @@ const InvitationForm = () => {
 
   return (
     <Form className="invitation-form">
-        <h3>Dear</h3>
+        <Row>
+        <Col sm={2}>
+        <h3>Dear </h3>
+        </Col>
+        <Col sm={4}>
+        <InviteDropdown/>
+        </Col>
+        </Row>
         <br />
         <h1 className="youre-invited" >You're invited to</h1>
         <Form.Group className="form-input-group message">

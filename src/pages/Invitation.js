@@ -1,5 +1,5 @@
 import React from "react";
-import InvitationForm from "../components/Invitation";
+import InvitationForm from "../components/Invitation";        
 // import Pdf from "react-to-pdf";
 
 
