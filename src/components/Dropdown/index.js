@@ -14,28 +14,29 @@ function CocktailsDropdown({ingredient, setIngredient}) {
     aria-label="Default select example"
     // When the form select is changed the ingredient variable 
     // in the useState dunction is changed to the target.value attibute value
+      onChange={(e) => handleChange(e)}
         >
       <option >Choose main ingredient</option>
-      <option value= 'i=Vodka' onClick={ (e) => handleChange(e)}>Vodka</option> 
+      <option value= 'i=Vodka' >Vodka</option> 
       {/* ingredient= 'i=Vodka' */}
       {/* this.onClick= triggers funciton to update ingredient variable  */}
-      <option value= 'i=Gin' onClick={ (e) => handleChange(e)}>Gin</option>
+      <option value= 'i=Gin' >Gin</option>
       {/* i=Gin */}
-      <option value= 'i=Whisky' onClick={ (e) => handleChange(e)}>Whisky</option>
+      <option value= 'i=Whisky' >Whisky</option>
       {/* i=Whisky */}
-      <option value= 'i=Rum' onClick={ (e) => handleChange(e)}>Rum</option>
+      <option value= 'i=Rum' >Rum</option>
       {/* i=Whisky */}
-      <option value= 'i=Beer' onClick={ (e) => handleChange(e)}>Beer</option>
+      <option value= 'i=Beer' >Beer</option>
       {/* i=Whisky */}
-      <option value= 'i=Red wine' onClick={ (e) => handleChange(e)}>Red Wine</option>
+      <option value= 'i=Red wine' >Red Wine</option>
       {/* i=Whisky */}
-      <option value= 'i=White wine' onClick={ (e) => handleChange(e)}>White Wine</option>
+      <option value= 'i=White wine' >White Wine</option>
       {/* i=Whisky */}
-      <option value= 'a=Non_Alcoholic' onClick={ (e) => handleChange(e)}
+      <option value= 'a=Non_Alcoholic' 
       style={{backgroundColor: '#BCFF85'}}
       >Non-alcoholic</option>
       {/* i=Non-alcoholic */}
-      <option value= 'Random' onClick={ (e) => handleChange(e)}
+      <option value= 'Random' 
       style={{backgroundColor: '#49C2BC'}}
       >Random</option>
       {/* www.thecocktaildb.com/api/json/v1/1/random.php */}

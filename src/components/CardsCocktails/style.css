@@ -1,3 +1,10 @@
 .title{
-    min-height: 100px
+    min-height: 100px;
+    text-align: center;
+}
+
+.buttonContainer{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
