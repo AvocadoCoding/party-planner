@@ -175,6 +175,14 @@ function CocktailCards({drink, drinkStorage, setDrinkStorage}) {
             <li>{drinkID.strIngredient2} {drinkID.strMeasure2}</li>
             <li>{drinkID.strIngredient3} {drinkID.strMeasure3}</li>
             <li>{drinkID.strIngredient4} {drinkID.strMeasure4}</li>
+            <li>{drinkID.strIngredient5} {drinkID.strMeasure5}</li>
+            <li>{drinkID.strIngredient6} {drinkID.strMeasure6}</li>
+            <li>{drinkID.strIngredient7} {drinkID.strMeasure7}</li>
+            <li>{drinkID.strIngredient8} {drinkID.strMeasure8}</li>
+            <li>{drinkID.strIngredient9} {drinkID.strMeasure9}</li>
+            <li>{drinkID.strIngredient10} {drinkID.strMeasure10}</li>
+            <li>{drinkID.strIngredient11} {drinkID.strMeasure11}</li>
+            <li>{drinkID.strIngredient12} {drinkID.strMeasure12}</li>
           </ul>
           </Modal.Body>
         <Modal.Footer>
