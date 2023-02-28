@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -13,10 +13,16 @@ const [drinkStorage, setDrinkStorage] = useState(initialState);
 console.log(drinkStorage);
 
 //Function to delete item from array by filtering by id
-const handleDelete = ({id}) => {
-  console.log(id);
-  setDrinkStorage(drinkStorage.filter((drink) => drink.key !== id));
+const handleDelete = (e) => {
+  e.preventDefault();
+  console.log(e.target.value);
+  setDrinkStorage(drinkStorage.filter((drink) => drink.key !== e.target.value));
 }
+
+//useEffect function to update local storage when drinkStorage array changes
+useEffect(() => {
+  localStorage.setItem("drinks", JSON.stringify(drinkStorage));
+}, [drinkStorage]);
 
 
 // Map saved local storage drinks to cards in page
@@ -41,7 +47,8 @@ const handleDelete = ({id}) => {
                 </ul>
                 {/* Delete button to remove item */}
                 <button className="button-delete button" 
-                onClick={() => handleDelete(currentDrink.key)}>
+                value ={currentDrink.key}
+                onClick={(e) => handleDelete(e)}>
                         🗑️
                 </button>
             </Card.Body>
