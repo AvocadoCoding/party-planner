@@ -16,19 +16,22 @@ import CocktailCards from "../components/CardsCocktails";
 
 function Homepage() {
 
+  // get local storage for button toogle, if nothing in local storage return
+  // empty array
+  const initialState = JSON.parse(localStorage.getItem("drinks")) || [];
+  const [drinkStorage, setDrinkStorage] = useState(initialState);
+  console.log(drinkStorage);
+
+  useEffect(() => {
+    localStorage.setItem("drinks", JSON.stringify(drinkStorage));
+  }, [drinkStorage]);
+
   // set useState value for user ingredient selection
   const  [ingredient, setIngredient]= useState("");
   // useState array variable to hold API response
   const  [drinksAPI, setDrinksAPI]= useState([]);
   console.log(drinksAPI);
   // console.log(drinksAPI[1].idDrink);
-
-
-// get local storage for button toogle, if nothing in local storage return
-    // empty array
-    const initialState = JSON.parse(localStorage.getItem("drinks")) || [];
-    const [drinkStorage, setDrinkStorage] = useState(initialState);
-    console.log(drinkStorage);
 
 
   
@@ -46,7 +49,6 @@ function Homepage() {
     .catch(err=>console.log(err))
   }
   },[ingredient])
-
  
   return (
     <div style={{backgroundColor: '#FEE1C7'}}>
