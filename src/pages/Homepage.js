@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 
 import search from "../components/utils/API";
 
+
 import CocktailCards from "../components/CardsCocktails";
 
 
@@ -22,8 +23,15 @@ function Homepage() {
   console.log(drinksAPI);
   // console.log(drinksAPI[1].idDrink);
 
-  // const test = drinksAPI.map((a)=>{a.idDrink})
-  // console.log(drinksAPI.map((a)=>{a.idDrink}));
+
+// get local storage for button toogle, if nothing in local storage return
+    // empty array
+    const initialState = JSON.parse(localStorage.getItem("drinks")) || [];
+    const [drinkStorage, setDrinkStorage] = useState(initialState);
+    console.log(drinkStorage);
+
+
+  
   // only trigger function when ingredient changes
   useEffect(()=>{
   // take ingredient state values and run API
@@ -70,8 +78,13 @@ function Homepage() {
         <Row>
         {/* Four cocktail cards will go here, but will be retuend via mapping component */}
         {drinksAPI.map((currentDrink)=> (
-        <Col xs={12} sm={6} lg={3} key={currentDrink.idDrink}>
-        <CocktailCards drink= {currentDrink}/>
+        <Col xs={12} sm={6} lg={3} 
+        key={currentDrink.idDrink}
+        >
+        <CocktailCards 
+        drink= {currentDrink}
+        drinkStorage={drinkStorage}
+        setDrinkStorage={setDrinkStorage}/>
         </Col>
         ))}
         </Row>
