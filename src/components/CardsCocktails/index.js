@@ -57,7 +57,7 @@ function CocktailCards({drink, drinkStorage, setDrinkStorage}) {
         .then(response=>{
         const drinksObject = Object.assign({},
         {
-            id: response.data.drinks[0].idDrink,
+            key: response.data.drinks[0].idDrink,
             name: response.data.drinks[0].strDrink,
             image: response.data.drinks[0].strDrinkThumb,
             /* instructions: response.data.drinks[0].strInstructions,
