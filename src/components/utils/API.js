@@ -1,11 +1,15 @@
 import axios from 'axios';
 
+const apiKey = process.env.REACT_APP_API_KEY;
+
+console.log(apiKey);
+
 // Using axios, we create a search method that is specific to our use case and export it at the bottom
 
 const search = {
-  searchRandom: () => axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/random.php`),
-  searchIngredient: (query) => axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?${query}`),
-  searchID: (query) => axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${query}`)
+  searchRandom: () => axios.get(`https://www.thecocktaildb.com/api/json/v2/${apiKey}/random.php`),
+  searchIngredient: (query) => axios.get(`https://www.thecocktaildb.com/api/json/v2/${apiKey}/filter.php?${query}`),
+  searchID: (query) => axios.get(`https://www.thecocktaildb.com/api/json/v2/${apiKey}/lookup.php?i=${query}`)
 }
 
 // How to call
