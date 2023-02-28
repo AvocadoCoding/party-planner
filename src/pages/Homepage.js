@@ -22,6 +22,7 @@ function Homepage() {
   const [drinkStorage, setDrinkStorage] = useState(initialState);
   console.log(drinkStorage);
 
+  
   useEffect(() => {
     localStorage.setItem("drinks", JSON.stringify(drinkStorage));
   }, [drinkStorage]);
@@ -33,8 +34,7 @@ function Homepage() {
   console.log(drinksAPI);
   // console.log(drinksAPI[1].idDrink);
 
-
-  
+ 
   // only trigger function when ingredient changes
   useEffect(()=>{
   // take ingredient state values and run API
