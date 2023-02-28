@@ -14,6 +14,7 @@ console.log(drinkStorage);
 
 //Function to delete item from array by filtering by id
 const handleDelete = ({id}) => {
+  console.log(id);
   setDrinkStorage(drinkStorage.filter((drink) => drink.key !== id));
 }
 
@@ -39,7 +40,8 @@ const handleDelete = ({id}) => {
                   <li>{currentDrink.strIngredient4} {currentDrink.strMeasure4}</li>
                 </ul>
                 {/* Delete button to remove item */}
-                <button className="button-delete button" onClick={() => handleDelete(currentDrink)}>
+                <button className="button-delete button" 
+                onClick={() => handleDelete(currentDrink.key)}>
                         🗑️
                 </button>
             </Card.Body>
