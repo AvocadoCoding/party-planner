@@ -25,7 +25,7 @@ function  NavbarBootstrap() {
           <Nav>
             <Nav.Link as={NavLink} to="/">Home</Nav.Link>
             <Nav.Link as={NavLink} to="/favourites">Favourites</Nav.Link>
-            <Nav.Link as={NavLink} to="/todo-list">To Do</Nav.Link>
+            <Nav.Link as={NavLink} to="/todo-list">To-Do</Nav.Link>
             <Nav.Link as={NavLink} to="/guestlist">Guestlist</Nav.Link>
             <Nav.Link as={NavLink} to="/invitations">Invitations</Nav.Link>
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const GuestlistItems = ({guests, setGuests}) => {
+const TodoItems = ({guests, setGuests}) => {
     
     const handleComplete = (guest) => {
         setGuests(
@@ -32,9 +32,6 @@ const GuestlistItems = ({guests, setGuests}) => {
                         <button className="button-complete button" onClick={() => handleComplete(guest)}>
                         ✅
                         </button>
-                       {/*  <button className="button-invitation button">
-                        💌
-                        </button> */}
                         <button className="button-delete button" onClick={() => handleDelete(guest)}>
                         🗑️
                         </button>
@@ -46,4 +43,4 @@ const GuestlistItems = ({guests, setGuests}) => {
     );
 }
  
-export default GuestlistItems;
+export default TodoItems;
