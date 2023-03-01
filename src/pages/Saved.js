@@ -13,7 +13,6 @@ function Saved() {
 // empty array
 const initialState = JSON.parse(localStorage.getItem("drinks")) || [];
 const [drinkStorage, setDrinkStorage] = useState(initialState);
-console.log(drinkStorage);
 
  // useState and functions for modal window appearance
  const [show, setShow] = useState(false);
@@ -41,7 +40,6 @@ const handleDelete = (e) => {
       .catch((err) => console.log(err));
     setShow(true);
   };
-  console.log(modalAPI);
 
 
 //useEffect function to update local storage when drinkStorage array changes

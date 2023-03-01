@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const apiKey = process.env.REACT_APP_API_KEY;
 
-console.log(apiKey);
+
 
 // Using axios, we create a search method that is specific to our use case and export it at the bottom
 

@@ -20,7 +20,6 @@ function Homepage() {
   // empty array
   const initialState = JSON.parse(localStorage.getItem("drinks")) || [];
   const [drinkStorage, setDrinkStorage] = useState(initialState);
-  console.log(drinkStorage);
 
   
   useEffect(() => {
@@ -31,8 +30,6 @@ function Homepage() {
   const  [ingredient, setIngredient]= useState("");
   // useState array variable to hold API response
   const  [drinksAPI, setDrinksAPI]= useState([]);
-  console.log(drinksAPI);
-  // console.log(drinksAPI[1].idDrink);
 
  
   // only trigger function when ingredient changes
