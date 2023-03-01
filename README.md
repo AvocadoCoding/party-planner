@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Party Planner App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### User Story
+As a party planner, I want to be able to browse cocktail ideas based on my preferred spirit, add cocktail ideas to my favorites page, create a to-do list, create a guest list, and generate an invitation for each guest on the list.
 
-In the project directory, you can run:
+### Description
+The Party Planner App allows users to browse cocktail ideas based on their preferred spirit, add cocktail ideas to their favorites page, create a to-do list, create a guest list, and generate an invitation for each guest on the list (the invitation form has been created as part of the mvp, but the print function has not yet been added, we are planning to use "react-to-print" npm package for that). The app uses a cocktail API to get cocktail inspiration based on the user's preferred spirit, and also has non-alcohlic and random searh options. Users can add tasks to a to-do list and guests to a guest list. Finally, users can prepare an invitation template and generate an invitation for each guest on the list.
 
-### `npm start`
+### Usage
+1. Select your preferred spirit from the dropdown menu
+2. Browse the cocktail ideas
+3. Add your favorite cocktail ideas to your favorites page
+4. Create a to-do list
+5. Create a guest list
+6. Generate an invitation for each guest on the list
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Wireframes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Wireframes](./src/images/Wireframes.png) 
 
-### `npm test`
+## Application screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Homepage
+![Homepage](./src/images/Homepage.png)
 
-### `npm run build`
+### Cocktail search options
+![Cocktail search options](./src/images/CocktailSearchOptions.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Favourites page
+![Favourites page](./src/images/FavouritesPage.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Guestlist
+![Guestlist](./src/images/Guestlist.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### To-Do List
+![To-Do List](./src/images/Todo.png)
 
-### `npm run eject`
+### Invitation
+![Invitation](./src/images/Party-invitation.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Invitation
+![Invitation](./src/images/Party-invitation.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Showing app responsivity
+![Showing app responsivity](./src/images/Responsive-app.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Demo video
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Deployed webpage link
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `View deployed webpage`
+Click [https://main--incomparable-nougat-a1b1eb.netlify.app/](https://main--incomparable-nougat-a1b1eb.netlify.app/) to view the deployed webpage.
