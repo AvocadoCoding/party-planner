@@ -52,6 +52,11 @@ useEffect(() => {
 
 // Map saved local storage drinks to cards in page
   return (
+    <div>
+    <Row colSpan="12">-</Row>
+    <Row>
+      <h1 style={{ textAlign: "center" }}>Your favourited drinks are saved here!</h1>
+    </Row>
     <Row>
     {drinkStorage.map((currentDrink)=> (
       <Col xs={12} sm={6} lg={3} key={currentDrink.key}>
@@ -150,9 +155,7 @@ useEffect(() => {
       </Col>
       ))}
     </Row>
-
-    
-    
+    </div>
   );
 }
 
