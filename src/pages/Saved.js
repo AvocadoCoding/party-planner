@@ -13,7 +13,6 @@ function Saved() {
 // empty array
 const initialState = JSON.parse(localStorage.getItem("drinks")) || [];
 const [drinkStorage, setDrinkStorage] = useState(initialState);
-console.log(drinkStorage);
 
  // useState and functions for modal window appearance
  const [show, setShow] = useState(false);
@@ -24,7 +23,6 @@ console.log(drinkStorage);
 //Function to delete item from array by filtering by id
 const handleDelete = (e) => {
   e.preventDefault();
-  console.log(e.target.value);
   setDrinkStorage(drinkStorage.filter((drink) => drink.key !== e.target.value));
 }
 
@@ -34,14 +32,13 @@ const handleDelete = (e) => {
     // modal window open function with API call
   const handleShow = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
     search
       .searchID(e.target.value)
       .then((drink) => setModalAPI(drink.data.drinks))
       .catch((err) => console.log(err));
     setShow(true);
   };
-  console.log(modalAPI);
+
 
 
 //useEffect function to update local storage when drinkStorage array changes
