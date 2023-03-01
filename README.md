@@ -27,6 +27,9 @@ The Party Planner App allows users to browse cocktail ideas based on their prefe
 ### Cocktail search options
 ![Cocktail search options](./src/images/CocktailSearchOptions.png)
 
+### Cocktail search results
+![Cocktail search results](./src/images/CocktailSearchResults.png)
+
 ### Favourites page
 ![Favourites page](./src/images/FavouritesPage.png)
 
@@ -37,13 +40,10 @@ The Party Planner App allows users to browse cocktail ideas based on their prefe
 ![To-Do List](./src/images/Todo.png)
 
 ### Invitation
-![Invitation](./src/images/Party-invitation.png)
-
-### Invitation
-![Invitation](./src/images/Party-invitation.png)
+![Invitation](./src/images/PartyInvitation.png)
 
 ### Showing app responsivity
-![Showing app responsivity](./src/images/Responsive-app.png)
+![Showing app responsivity](./src/images/ResponsiveApp.png)
 
 ## Demo video
 
