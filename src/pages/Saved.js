@@ -53,7 +53,7 @@ useEffect(() => {
 // Map saved local storage drinks to cards in page
   return (
     <div>
-      <Row colSpan="12">-</Row>
+    <Row colSpan="12">-</Row>
     <Row>
       <h1 style={{ textAlign: "center" }}>Your favourited drinks are saved here!</h1>
     </Row>
