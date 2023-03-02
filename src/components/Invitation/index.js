@@ -21,15 +21,11 @@ const InvitationForm = () => {
         setInvitationData(newInvitationData);
 
         localStorage.setItem("invitationData", JSON.stringify(newInvitationData));
-        console.log(invitationData);
-        console.log(e.target);
-        console.log(value);
       };
 
       useEffect(() => {
         const storedData = JSON.parse(localStorage.getItem("invitationData"));
         if (storedData) {
-            console.log("storedData", storedData)
           setInvitationData(storedData);
         }
       }, []);

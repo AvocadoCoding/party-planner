@@ -2,7 +2,7 @@
 
 
 ### User Story
-As a party planner I want a tool to help me plan my party. I want to be able to browse cocktail ideas based on my preferred spirit, add cocktail ideas to my favorites page, create a to-do list, create a guest list, and generate an invitation for each guest on the list.
+As a party host I want a tool to help me plan my party. I want to be able to browse cocktail ideas based on my preferred spirit and save cocktail ideas to my favorites page so I can prepare some interesting drinks for my guests. I want to create a to-do list to organsie my tasks. I also want to create a guest list and generate an invitation for each guest on the list, to manage my guest invitations.
 
 ### Description
 The Party Planner App allows users to browse cocktail ideas based on their preferred spirit, add cocktail ideas to their favorites page, create a to-do list, create a guest list, and generate an invitation for each guest on the list (the invitation form has been created as part of the mvp, but the print function has not yet been added, we are planning to use "react-to-print" npm package for that). The app uses a cocktail API to get cocktail inspiration based on the user's preferred spirit, and also has non-alcohlic and random searh options. Users can add tasks to a to-do list and guests to a guest list. Finally, users can prepare an invitation template and generate an invitation for each guest on the list.
