@@ -16,7 +16,7 @@ function CocktailsDropdown({ingredient, setIngredient}) {
     // in the useState dunction is changed to the target.value attibute value
       onChange={(e) => handleChange(e)}
         >
-      <option >Choose main ingredient</option>
+      <option value= ''>Choose main ingredient</option>
       <option value= 'i=Vodka' >Vodka</option> 
       {/* ingredient= 'i=Vodka' */}
       {/* this.onClick= triggers funciton to update ingredient variable  */}

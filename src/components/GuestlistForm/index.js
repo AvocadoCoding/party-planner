@@ -13,7 +13,6 @@ const GuestlistForm = ({guests, setGuests}) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(input)
         setGuests([...guests, {id: uuidv4(), title: input, completed: false}])
         setInput("");
     }

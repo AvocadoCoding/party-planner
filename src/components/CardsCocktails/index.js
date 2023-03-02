@@ -33,7 +33,7 @@ function CocktailCards({ drink, drinkStorage, setDrinkStorage }) {
       .catch((err) => console.log(err));
     setShow(true);
   };
-  console.log(modalAPI);
+
 
   
   // Need to add API call in this part
