@@ -43,7 +43,8 @@ The Party Planner App allows users to browse cocktail ideas based on their prefe
 ![Invitation](./src/images/PartyInvitation.png)
 
 ### Showing app responsivity
-![Showing app responsivity](./src/images/ResponsiveApp.png)
+![image](https://user-images.githubusercontent.com/116954089/222547887-d403a21f-e954-4881-a112-d0db33180b10.png)
+
 
 ## App Demo video
 
